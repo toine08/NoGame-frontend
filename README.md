@@ -1,1 +1,1 @@
-# NoGame-frontend
+## NoGame frontend application
