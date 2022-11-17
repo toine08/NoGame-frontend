@@ -1,0 +1,1078 @@
+[
+    {
+        "members": [
+            {
+                "name": "low",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "high",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "Uint256",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "metal",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "crystal",
+                "offset": 1,
+                "type": "felt"
+            },
+            {
+                "name": "deuterium",
+                "offset": 2,
+                "type": "felt"
+            },
+            {
+                "name": "energy_cost",
+                "offset": 3,
+                "type": "felt"
+            }
+        ],
+        "name": "Cost",
+        "size": 4,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "armour_tech",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "astrophysics",
+                "offset": 1,
+                "type": "felt"
+            },
+            {
+                "name": "combustion_drive",
+                "offset": 2,
+                "type": "felt"
+            },
+            {
+                "name": "computer_tech",
+                "offset": 3,
+                "type": "felt"
+            },
+            {
+                "name": "energy_tech",
+                "offset": 4,
+                "type": "felt"
+            },
+            {
+                "name": "espionage_tech",
+                "offset": 5,
+                "type": "felt"
+            },
+            {
+                "name": "hyperspace_drive",
+                "offset": 6,
+                "type": "felt"
+            },
+            {
+                "name": "hyperspace_tech",
+                "offset": 7,
+                "type": "felt"
+            },
+            {
+                "name": "impulse_drive",
+                "offset": 8,
+                "type": "felt"
+            },
+            {
+                "name": "ion_tech",
+                "offset": 9,
+                "type": "felt"
+            },
+            {
+                "name": "laser_tech",
+                "offset": 10,
+                "type": "felt"
+            },
+            {
+                "name": "plasma_tech",
+                "offset": 11,
+                "type": "felt"
+            },
+            {
+                "name": "shielding_tech",
+                "offset": 12,
+                "type": "felt"
+            },
+            {
+                "name": "weapons_tech",
+                "offset": 13,
+                "type": "felt"
+            }
+        ],
+        "name": "TechLevels",
+        "size": 14,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "cargo",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "recycler",
+                "offset": 1,
+                "type": "felt"
+            },
+            {
+                "name": "espionage_probe",
+                "offset": 2,
+                "type": "felt"
+            },
+            {
+                "name": "solar_satellite",
+                "offset": 3,
+                "type": "felt"
+            },
+            {
+                "name": "light_fighter",
+                "offset": 4,
+                "type": "felt"
+            },
+            {
+                "name": "cruiser",
+                "offset": 5,
+                "type": "felt"
+            },
+            {
+                "name": "battle_ship",
+                "offset": 6,
+                "type": "felt"
+            },
+            {
+                "name": "death_star",
+                "offset": 7,
+                "type": "felt"
+            }
+        ],
+        "name": "Fleet",
+        "size": 8,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "building_id",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "lock_end",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "ResourcesQue",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "ship_id",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "units",
+                "offset": 1,
+                "type": "felt"
+            },
+            {
+                "name": "lock_end",
+                "offset": 2,
+                "type": "felt"
+            }
+        ],
+        "name": "ShipyardQue",
+        "size": 3,
+        "type": "struct"
+    },
+    {
+        "members": [
+            {
+                "name": "tech_id",
+                "offset": 0,
+                "type": "felt"
+            },
+            {
+                "name": "lock_end",
+                "offset": 1,
+                "type": "felt"
+            }
+        ],
+        "name": "ResearchQue",
+        "size": 2,
+        "type": "struct"
+    },
+    {
+        "data": [
+            {
+                "name": "previousOwner",
+                "type": "felt"
+            },
+            {
+                "name": "newOwner",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "data": [
+            {
+                "name": "planet_id",
+                "type": "Uint256"
+            },
+            {
+                "name": "spent",
+                "type": "felt"
+            }
+        ],
+        "keys": [],
+        "name": "resources_spent",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "name": "owner",
+                "type": "felt"
+            },
+            {
+                "name": "modules_manager",
+                "type": "felt"
+            }
+        ],
+        "name": "constructor",
+        "outputs": [],
+        "type": "constructor"
+    },
+    {
+        "inputs": [],
+        "name": "getTokensAddresses",
+        "outputs": [
+            {
+                "name": "erc721",
+                "type": "felt"
+            },
+            {
+                "name": "erc20_metal",
+                "type": "felt"
+            },
+            {
+                "name": "erc20_crystal",
+                "type": "felt"
+            },
+            {
+                "name": "erc20_deuterium",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getModulesAddresses",
+        "outputs": [
+            {
+                "name": "_resources",
+                "type": "felt"
+            },
+            {
+                "name": "_facilities",
+                "type": "felt"
+            },
+            {
+                "name": "_shipyard",
+                "type": "felt"
+            },
+            {
+                "name": "_research",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "numberOfPlanets",
+        "outputs": [
+            {
+                "name": "n_planets",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "caller",
+                "type": "felt"
+            }
+        ],
+        "name": "getPlayerPoints",
+        "outputs": [
+            {
+                "name": "points",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "caller",
+                "type": "felt"
+            }
+        ],
+        "name": "getResourcesBuildingsLevels",
+        "outputs": [
+            {
+                "name": "metal_mine",
+                "type": "felt"
+            },
+            {
+                "name": "crystal_mine",
+                "type": "felt"
+            },
+            {
+                "name": "deuterium_mine",
+                "type": "felt"
+            },
+            {
+                "name": "solar_plant",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "caller",
+                "type": "felt"
+            }
+        ],
+        "name": "getResourcesUpgradeCost",
+        "outputs": [
+            {
+                "name": "metal_mine",
+                "type": "Cost"
+            },
+            {
+                "name": "crystal_mine",
+                "type": "Cost"
+            },
+            {
+                "name": "deuterium_mine",
+                "type": "Cost"
+            },
+            {
+                "name": "solar_plant",
+                "type": "Cost"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "caller",
+                "type": "felt"
+            }
+        ],
+        "name": "getFacilitiesLevels",
+        "outputs": [
+            {
+                "name": "robot_factory",
+                "type": "felt"
+            },
+            {
+                "name": "shipyard",
+                "type": "felt"
+            },
+            {
+                "name": "research_lab",
+                "type": "felt"
+            },
+            {
+                "name": "nanite_factory",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "caller",
+                "type": "felt"
+            }
+        ],
+        "name": "getFacilitiesUpgradeCost",
+        "outputs": [
+            {
+                "name": "robot_factory",
+                "type": "Cost"
+            },
+            {
+                "name": "shipyard",
+                "type": "Cost"
+            },
+            {
+                "name": "research_lab",
+                "type": "Cost"
+            },
+            {
+                "name": "nanite_factory",
+                "type": "Cost"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "caller",
+                "type": "felt"
+            }
+        ],
+        "name": "getTechLevels",
+        "outputs": [
+            {
+                "name": "result",
+                "type": "TechLevels"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "caller",
+                "type": "felt"
+            }
+        ],
+        "name": "getTechUpgradeCost",
+        "outputs": [
+            {
+                "name": "armour_tech",
+                "type": "Cost"
+            },
+            {
+                "name": "astrophysics",
+                "type": "Cost"
+            },
+            {
+                "name": "combustion_drive",
+                "type": "Cost"
+            },
+            {
+                "name": "computer_tech",
+                "type": "Cost"
+            },
+            {
+                "name": "energy_tech",
+                "type": "Cost"
+            },
+            {
+                "name": "espionage_tech",
+                "type": "Cost"
+            },
+            {
+                "name": "hyperspace_drive",
+                "type": "Cost"
+            },
+            {
+                "name": "hyperspace_tech",
+                "type": "Cost"
+            },
+            {
+                "name": "impulse_drive",
+                "type": "Cost"
+            },
+            {
+                "name": "ion_tech",
+                "type": "Cost"
+            },
+            {
+                "name": "laser_tech",
+                "type": "Cost"
+            },
+            {
+                "name": "plasma_tech",
+                "type": "Cost"
+            },
+            {
+                "name": "shielding_tech",
+                "type": "Cost"
+            },
+            {
+                "name": "weapons_tech",
+                "type": "Cost"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "caller",
+                "type": "felt"
+            }
+        ],
+        "name": "getFleetLevels",
+        "outputs": [
+            {
+                "name": "result",
+                "type": "Fleet"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getShipsCost",
+        "outputs": [
+            {
+                "name": "cargo",
+                "type": "Cost"
+            },
+            {
+                "name": "recycler",
+                "type": "Cost"
+            },
+            {
+                "name": "espionage_probe",
+                "type": "Cost"
+            },
+            {
+                "name": "solar_satellite",
+                "type": "Cost"
+            },
+            {
+                "name": "light_fighter",
+                "type": "Cost"
+            },
+            {
+                "name": "cruiser",
+                "type": "Cost"
+            },
+            {
+                "name": "battleship",
+                "type": "Cost"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "caller",
+                "type": "felt"
+            }
+        ],
+        "name": "getResourcesAvailable",
+        "outputs": [
+            {
+                "name": "metal",
+                "type": "felt"
+            },
+            {
+                "name": "crystal",
+                "type": "felt"
+            },
+            {
+                "name": "deuterium",
+                "type": "felt"
+            },
+            {
+                "name": "energy",
+                "type": "felt"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "caller",
+                "type": "felt"
+            }
+        ],
+        "name": "getBuildingQueStatus",
+        "outputs": [
+            {
+                "name": "status",
+                "type": "ResourcesQue"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "caller",
+                "type": "felt"
+            }
+        ],
+        "name": "getShipyardQueStatus",
+        "outputs": [
+            {
+                "name": "status",
+                "type": "ShipyardQue"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "caller",
+                "type": "felt"
+            }
+        ],
+        "name": "getResearchQueStatus",
+        "outputs": [
+            {
+                "name": "status",
+                "type": "ResearchQue"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "generatePlanet",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "collectResources",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "metalUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "metalUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "crystalUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "crystalUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "deuteriumUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "deuteriumUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "solarUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "solarUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "robotUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "robotUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "shipyardUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "shipyardUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "researchUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "researchUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "naniteUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "naniteUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "units",
+                "type": "felt"
+            }
+        ],
+        "name": "cargoShipBuildStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "cargoShipBuildComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "units",
+                "type": "felt"
+            }
+        ],
+        "name": "recyclerShipBuildStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "recyclerShipBuildComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "units",
+                "type": "felt"
+            }
+        ],
+        "name": "espionageProbeBuildStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "espionageProbeBuildComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "units",
+                "type": "felt"
+            }
+        ],
+        "name": "solarSatelliteBuildStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "solarSatelliteBuildComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "units",
+                "type": "felt"
+            }
+        ],
+        "name": "lightFighterBuildStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "lightFighterBuildComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "units",
+                "type": "felt"
+            }
+        ],
+        "name": "cruiserBuildStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "cruiserBuildComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "name": "units",
+                "type": "felt"
+            }
+        ],
+        "name": "battleShipBuildStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "battleShipBuildComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "armourTechUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "armourTechUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "astrophysicsUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "astrophysicsUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "combustionDriveUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "combustionDriveUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "computerTechUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "computerTechUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "energyTechUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "energyTechUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "espionageTechUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "espionageTechUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "hyperspaceDriveUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "hyperspaceDriveUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "hyperspaceTechUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "hyperspaceTechUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "impulseDriveUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "impulseDriveUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "ionTechUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "ionTechUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "laserTechUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "laserTechUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "plasmaTechUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "plasmaTechUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "shieldingTechUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "shieldingTechUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "weaponsTechUpgradeStart",
+        "outputs": [],
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "weaponsTechUpgradeComplete",
+        "outputs": [],
+        "type": "function"
+    }
+]
