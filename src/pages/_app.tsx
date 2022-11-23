@@ -21,7 +21,7 @@ const AuthController = ({ Component, pageProps }: AppProps) => {
 
   const [walletConnectLoading, setWalletConnectLoading] = useState<boolean>(true)
 
-  const injected = useMemo(() => new InjectedConnector({ showModal: false }), [])
+  const injected = useMemo(() => new InjectedConnector({ options: { id: 'braavos'}}), [])
 
   useEffect(() => {
     setTimeout(() => {
@@ -71,7 +71,6 @@ const AuthController = ({ Component, pageProps }: AppProps) => {
 function MyApp(props: AppProps) {
   BigNumber.config({ EXPONENTIAL_AT: 76 })
   const provider = new SequencerProvider({ network: "goerli-alpha-2" })
-
   return (
     <StarknetConfig autoConnect defaultProvider={provider}>
       <S2MTransactionManagerProvider>

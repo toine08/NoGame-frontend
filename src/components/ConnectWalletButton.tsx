@@ -7,7 +7,7 @@ import { ButtonPrimary } from './Button'
 export function ConnectWalletButton() {
   const { account, connect } = useStarknet()
 
-  const injected = useMemo(() => new InjectedConnector(), [])
+  const injected = useMemo(() => new InjectedConnector({ options: { id: 'braavos' }}), [])
 
   // useEffect(() => {
   //   setTimeout(() => {
