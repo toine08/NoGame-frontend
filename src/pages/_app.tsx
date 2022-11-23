@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app'
 import NextHead from 'next/head'
 import { FixedGlobalStyle, ThemedGlobalStyle } from '../theme'
-import { InjectedConnector, StarknetProvider, useStarknet, useStarknetCall } from '@starknet-react/core'
+import { InjectedConnector, StarknetConfig, StarknetProvider, useStarknet, useStarknetCall } from '@starknet-react/core'
 import { BigNumber } from 'bignumber.js'
 import React, { useEffect, useMemo, useState } from 'react'
 import { S2MTransactionManagerProvider } from '~/providers/transaction'
@@ -11,7 +11,7 @@ import Popups from '~/components/Popups'
 import { AppWrapper } from '~/components/Core/AppWrapper'
 import useGeneratePlanet from '~/hooks/calls/useGeneratePlanet'
 import AuthScreen from '~/pages/loginOrGenerate'
-import { uint256 } from 'starknet'
+import { SequencerProvider, uint256 } from 'starknet'
 import Dashboard from './dashboard'
 import 'react-tabs/style/react-tabs.css'
 import CartridgeConnector from '@cartridge/connector'
@@ -70,10 +70,10 @@ const AuthController = ({ Component, pageProps }: AppProps) => {
 
 function MyApp(props: AppProps) {
   BigNumber.config({ EXPONENTIAL_AT: 76 })
-  const connector = new CartridgeConnector()
+  const provider = new SequencerProvider({ network: "goerli-alpha-2" })
 
   return (
-    <StarknetProvider autoConnect connectors={[connector]}>
+    <StarknetConfig autoConnect defaultProvider={provider}>
       <S2MTransactionManagerProvider>
         <NextHead>
           <title>NoGame</title>
@@ -85,7 +85,7 @@ function MyApp(props: AppProps) {
           <AuthController {...props} />
         </AppWrapper>
       </S2MTransactionManagerProvider>
-    </StarknetProvider>
+    </StarknetConfig>
   )
 }
 
